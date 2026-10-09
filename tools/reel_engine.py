@@ -104,7 +104,13 @@ class Txt:
 
 def logo_mask(path):
     if path and os.path.exists(path):
-        src = np.asarray(Image.open(path).convert("L"), np.float32); m = np.clip((205 - src) / 160, 0, 1)
+        li = Image.open(path)
+        if li.mode in ("RGBA", "LA") or "transparency" in li.info:
+            li = li.convert("RGBA"); al = np.asarray(li.getchannel("A"), np.float32) / 255
+            lum = np.asarray(li.convert("L"), np.float32); m = al * np.clip((205 - lum) / 160, 0, 1)
+            if m.max() < 0.2: m = al
+        else:
+            src = np.asarray(li.convert("L"), np.float32); m = np.clip((205 - src) / 160, 0, 1)
         ys, xs = np.where(m > 0.1); m = m[ys.min() - 3:ys.max() + 4, xs.min() - 3:xs.max() + 4]
         return np.asarray(Image.fromarray((m * 255).astype(np.uint8)).resize((230, int(m.shape[0] * 230 / m.shape[1])), Image.LANCZOS), np.float32) / 255
     f = ImageFont.truetype(D + "NotoSerifCJK-Bold.ttc", 34, index=1)
