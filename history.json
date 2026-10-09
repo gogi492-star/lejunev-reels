@@ -1,0 +1,8 @@
+{
+  "note": "릴스 게시 기록. 새 릴스를 만들 때 최근 3개와 형식(format)·전환(transition)·글씨(text)·음악(music)·훅(hook)·CTA가 겹치지 않게 고른다.",
+  "posts": [
+    {"date": "2026-10-09 18:15", "product": "브랜드 로고 릴스", "format": "brand", "transition": "letter-drop", "text": "center", "music": "original-ambient", "hook": "로고 등장", "cta": "profile"},
+    {"date": "2026-10-09 19:15", "product": "피너츠맨즈크로스백", "format": "lookbook", "transition": "stack", "text": "bottom", "music": "none", "hook": "3년 멜 크로스백, 이 정도는 들어가야죠", "cta": "save+dm"},
+    {"date": "2026-10-09 22:40", "product": "조쿨백팩", "format": "lookbook", "transition": "stack", "text": "bottom", "music": "lofi", "hook": "가볍게 메는 미니 백팩, 단 230g", "cta": "save+dm", "video": "reels/joecool_backpack_20261009.mp4"}
+  ]
+}
