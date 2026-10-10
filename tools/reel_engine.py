@@ -8,7 +8,7 @@ config 예시:
  "logo": "로고 이미지 경로(선택)",
  "transition": "stack|fade|whip|flash",
  "text": "bottom|center|top",
- "music": "lofi|upbeat|chill|acoustic|none",
+ "music": "lofi|upbeat|chill|acoustic|bouncy|moody|none",  (bouncy=경쾌·통통, moody=가죽용 차분한 재즈풍)
  "scenes": [
    {"src": "a.jpg", "focus": 0.4, "label": "WEAR", "head": "가볍게 메는 미니 백팩", "sub": "단 230g", "beats": 4},
    {"src": "b.jpg", "focus": "contain", "light": true, "label": "SIZE", "head": "...", "sub": "..."}
@@ -35,6 +35,8 @@ MOODS = {  # bpm, 코드(루트 포함 주파수)
     "upbeat":   (120, [[261.63,329.63,392.0],[196.0,246.94,293.66],[220.0,261.63,329.63],[174.61,220.0,261.63]]),
     "chill":    (104, [[220.0,261.63,329.63,392.0],[146.83,174.61,220.0,261.63],[196.0,246.94,293.66,349.23],[130.81,164.81,196.0,246.94]]),
     "acoustic": (92,  [[196.0,246.94,293.66],[146.83,185.0,220.0],[164.81,196.0,246.94],[130.81,164.81,196.0]]),
+    "bouncy":   (128, [[261.63,329.63,392.0,523.25],[196.0,246.94,293.66,392.0],[220.0,261.63,329.63,440.0],[174.61,220.0,261.63,349.23]]),
+    "moody":    (72,  [[110.0,196.0,261.63,329.63],[87.31,174.61,220.0,329.63],[73.42,174.61,220.0,261.63],[82.41,207.65,246.94,293.66]]),
 }
 
 def cl(t): return min(1, max(0, t))
@@ -140,6 +142,24 @@ def music(path, dur, cuts, mood):
                 f = ch[k % len(ch)] * (2 if k % 4 == 3 else 1); i = s + int(k * beat / 2 * SR)
                 add(i, pluck(f, int(beat * 2 * SR), SR) * 0.22, 0.8 if k % 2 else 1.0, 1.0 if k % 2 else 0.8)
             continue
+        if mood == "bouncy":  # 통통 튀는 16분 플럭 + 밝은 패드
+            for k in range(16):
+                if k % 8 in (3, 7) and b % 2: continue
+                f = ch[(k * 3) % len(ch)] * (2 if k % 4 == 2 else 1); i = s + int(k * beat / 4 * SR)
+                add(i, pluck(f, int(beat * SR), SR, 0.985) * 0.20, 0.7 if k % 2 else 1.0, 1.0 if k % 2 else 0.7)
+            env = np.clip(tt / 0.02, 0, 1) * np.clip((bar - tt) / 0.2, 0, 1)
+            for f in ch[:3]: add(s, np.sin(2 * np.pi * f * tt) * env * 0.025 * (0.5 + 0.5 * (np.sin(2 * np.pi * (bpm / 60) * tt) > 0)))
+            add(s, np.sin(2 * np.pi * ch[0] / 2 * tt) * env * 0.12 * (np.sin(2 * np.pi * (bpm / 60) * tt) > -0.2))
+            continue
+        if mood == "moody":  # 로즈 피아노 느낌 + 느린 트레몰로 + 가끔 고음 한 음
+            env = np.clip(tt / 0.6, 0, 1) * np.clip((bar - tt) / 0.6, 0, 1); trem = 0.75 + 0.25 * np.sin(2 * np.pi * 4.2 * tt)
+            for f in ch:
+                v = (np.sin(2 * np.pi * f * tt) + 0.3 * np.sin(2 * np.pi * 2 * f * tt) * np.exp(-tt * 2)) * trem
+                add(s, v * env * 0.05, 0.9, 1.0)
+            add(s, np.sin(2 * np.pi * ch[0] / 2 * tt) * env * 0.13)
+            for k in (2, 5) if b % 2 else (3,):
+                add(s + int(k * beat / 2 * SR), pluck(ch[(b + k) % len(ch)] * 2, int(beat * 2 * SR), SR, 0.998) * 0.12, 1.0, 0.7)
+            continue
         env = np.clip(tt / (0.05 if mood == "upbeat" else 0.3), 0, 1) * np.clip((bar - tt) / 0.3, 0, 1)
         for f in ch:
             for dt in (-0.7, 0.7):
@@ -167,6 +187,14 @@ def music(path, dur, cuts, mood):
             if k % 4 == 2: clap(i, 0.08)
         elif mood == "acoustic":
             hat(i, 0.025, 0.03); hat(half, 0.018, 0.03)
+        elif mood == "bouncy":
+            kick(i, 0.36); hat(half, 0.07, 0.06); hat(int((k + 0.75) * beat * SR), 0.03, 0.03)
+            if k % 2 == 1: clap(i, 0.18)
+        elif mood == "moody":
+            if k % 4 == 0: kick(i, 0.24)
+            if k % 4 == 2: kick(int((k + 0.5) * beat * SR), 0.16)
+            hat(half, 0.022, 0.12)
+            if k % 4 == 3: clap(i, 0.05)
     for c in cuts:  # 장면 전환 효과음
         i = int(c * SR); n = int(0.9 * SR); tt = np.arange(n) / SR
         add(i, sum(a * np.sin(2 * np.pi * 1046.5 * m * tt) * np.exp(-tt * d) for m, a, d in [(1, 1, 4), (2, .4, 6)]) * 0.025)
