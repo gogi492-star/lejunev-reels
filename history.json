@@ -42,6 +42,17 @@
       "hook": "가방 하나, 룩 셋",
       "cta": "comment-link+save",
       "video": "reels/pobing_snoopy2_20261010.mp4"
+    },
+    {
+      "date": "2026-10-10 20:50",
+      "product": "디포켓숄더",
+      "format": "pickcolor",
+      "transition": "fade",
+      "text": "center",
+      "music": "chill",
+      "hook": "너는 어떤 색? 댓글로 골라주세요",
+      "cta": "comment-link+color",
+      "video": "reels/di_pocket_shoulder_20261010.mp4"
     }
   ]
 }
