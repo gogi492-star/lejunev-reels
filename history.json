@@ -226,6 +226,58 @@
       "cta": "profile",
       "video": "reels/suede_border_20261017.mp4",
       "status": "cancelled"
+    },
+    {
+      "date": "2026-10-13 12:30",
+      "product": "체커플리스탁",
+      "format": "pickcolor",
+      "transition": "whip",
+      "text": "bottom",
+      "music": "upbeat",
+      "hook": "체크 시즌 왔죠? / 피너츠 체크 플리스 백",
+      "cta": "profile",
+      "video": "reels/checker_fleece_20261013.mp4",
+      "status": "scheduled",
+      "style": "v4 짧게(약 15초)·첫 화면 대화체·엔딩 공유 문구"
+    },
+    {
+      "date": "2026-10-16 18:00",
+      "product": "리쥬더로핸들",
+      "format": "forwho",
+      "transition": "fade",
+      "text": "top",
+      "music": "moody",
+      "hook": "출근 가방, 이거 어때요? / 양가죽 직사각 숄더백",
+      "cta": "profile",
+      "video": "reels/leju_lohandle_20261016.mp4",
+      "status": "scheduled",
+      "style": "v4 짧게(약 15초)·첫 화면 대화체·엔딩 공유 문구"
+    },
+    {
+      "date": "2026-10-17 12:30",
+      "product": "피너츠뽀글크로스",
+      "format": "sendfriend",
+      "transition": "flash",
+      "text": "bottom",
+      "music": "bouncy",
+      "hook": "폰만 들고 나가죠? / 스누피 뽀글 미니 크로스",
+      "cta": "profile",
+      "video": "reels/peanuts_bbogle_cross_20261017.mp4",
+      "status": "scheduled",
+      "style": "v4 짧게(약 15초)·첫 화면 대화체·엔딩 공유 문구"
+    },
+    {
+      "date": "2026-10-17 18:00",
+      "product": "피너츠스퀘어",
+      "format": "forwho",
+      "transition": "stack",
+      "text": "bottom",
+      "music": "acoustic",
+      "hook": "통학 가방 고민 중? / 넉넉한 스누피 사각 토트",
+      "cta": "profile",
+      "video": "reels/peanuts_square_20261017.mp4",
+      "status": "scheduled",
+      "style": "v4 짧게(약 15초)·첫 화면 대화체·엔딩 공유 문구"
     }
   ]
 }
