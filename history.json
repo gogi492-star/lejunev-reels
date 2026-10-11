@@ -213,7 +213,7 @@
       "hook": "짐 많은 사람에게 / 넉넉한 피너츠 토트",
       "cta": "profile",
       "video": "reels/peanuts_together_20261017_v3.mp4",
-      "status": "scheduled"
+      "status": "cancelled"
     },
     {
       "date": "2026-10-17 18:00",
@@ -225,7 +225,7 @@
       "hook": "가을 무드 토트 / 소가죽 100% 세무",
       "cta": "profile",
       "video": "reels/suede_border_20261017.mp4",
-      "status": "scheduled"
+      "status": "cancelled"
     }
   ]
 }
