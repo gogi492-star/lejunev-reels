@@ -83,15 +83,16 @@
       "product": "스누피마이토트백",
       "format": "pickcolor",
       "transition": "flash",
-      "text": "bottom",
-      "music": "upbeat",
-      "hook": "너는 어떤 색? / 댓글로 골라주세요",
+      "text": "center",
+      "music": "bouncy",
+      "hook": "겨울 가방 아직이죠? / 뽀글뽀글 스누피 토트",
       "cta": "profile",
-      "video": "reels/snoopy_my_tote_20261012_v3.mp4",
-      "status": "scheduled"
+      "video": "reels/snoopy_my_tote_20261012_v4.mp4",
+      "status": "scheduled",
+      "style": "v4 짧게(9~12초)·첫 화면 대화체·엔딩 공유 문구"
     },
     {
-      "date": "2026-10-12 20:50",
+      "date": "2026-10-12 18:00",
       "product": "디즈니패밀리뽀글",
       "format": "forwho",
       "transition": "fade",
@@ -115,16 +116,17 @@
       "status": "cancelled"
     },
     {
-      "date": "2026-10-13 20:50",
+      "date": "2026-10-13 18:00",
       "product": "리쥬하프문레더 소",
-      "format": "outfit3",
-      "transition": "stack",
-      "text": "center",
-      "music": "lofi",
-      "hook": "가방 하나, 룩 셋 / 반달 가죽백 하나로",
+      "format": "lookbook",
+      "transition": "fade",
+      "text": "bottom",
+      "music": "moody",
+      "hook": "매일 들 가죽백 찾죠? / 반달 실루엣 소가죽 백",
       "cta": "profile",
-      "video": "reels/halfmoon_leather_s_20261013.mp4",
-      "status": "scheduled"
+      "video": "reels/halfmoon_leather_s_20261013_v4.mp4",
+      "status": "scheduled",
+      "style": "v4 짧게(9~12초)·첫 화면 대화체·엔딩 공유 문구"
     },
     {
       "date": "2026-10-14 12:30",
@@ -139,31 +141,33 @@
       "status": "scheduled"
     },
     {
-      "date": "2026-10-14 20:50",
+      "date": "2026-10-14 18:00",
       "product": "미키포켓백팩",
       "format": "forwho",
-      "transition": "fade",
-      "text": "bottom",
+      "transition": "whip",
+      "text": "top",
       "music": "upbeat",
-      "hook": "통학러에게 추천 / 가볍게 메는 미키 백팩",
+      "hook": "오늘 백팩 뭐 메지? / 가볍게 메는 미키 백팩",
       "cta": "profile",
-      "video": "reels/mickey_pocket_backpack_20261014_v2.mp4",
-      "status": "scheduled"
+      "video": "reels/mickey_pocket_backpack_20261014_v4.mp4",
+      "status": "scheduled",
+      "style": "v4 짧게(9~12초)·첫 화면 대화체·엔딩 공유 문구"
     },
     {
       "date": "2026-10-15 12:30",
       "product": "아이러브스누피",
       "format": "sendfriend",
-      "transition": "whip",
+      "transition": "stack",
       "text": "top",
-      "music": "bouncy",
-      "hook": "스누피 러버 태그 / 이 가방 같이 들 친구",
+      "music": "lofi",
+      "hook": "스누피 러버 있나요? / 아이러브스누피 토트",
       "cta": "profile",
-      "video": "reels/ilovesnoopy_20261015_v3.mp4",
-      "status": "scheduled"
+      "video": "reels/ilovesnoopy_20261015_v4.mp4",
+      "status": "scheduled",
+      "style": "v4 짧게(9~12초)·첫 화면 대화체·엔딩 공유 문구"
     },
     {
-      "date": "2026-10-15 20:50",
+      "date": "2026-10-15 18:00",
       "product": "리쥬레더포켓백팩",
       "format": "whatfits",
       "transition": "stack",
@@ -178,13 +182,14 @@
       "date": "2026-10-16 12:30",
       "product": "피너츠플러피",
       "format": "outfit3",
-      "transition": "flash",
+      "transition": "stack",
       "text": "bottom",
-      "music": "upbeat",
-      "hook": "가방 하나, 룩 셋 / 폭신폭신 피너츠",
+      "music": "acoustic",
+      "hook": "몇 번 룩이 좋아요? / 폭신한 피너츠 플러피",
       "cta": "profile",
-      "video": "reels/peanuts_pluppy_20261016_v3.mp4",
-      "status": "scheduled"
+      "video": "reels/peanuts_pluppy_20261016_v4.mp4",
+      "status": "scheduled",
+      "style": "v4 짧게(9~12초)·첫 화면 대화체·엔딩 공유 문구"
     },
     {
       "date": "2026-10-16 20:50",
@@ -211,7 +216,7 @@
       "status": "scheduled"
     },
     {
-      "date": "2026-10-17 20:50",
+      "date": "2026-10-17 18:00",
       "product": "리쥬세무보더",
       "format": "lookbook",
       "transition": "stack",

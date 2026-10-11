@@ -13,7 +13,8 @@ config 예시:
    {"src": "a.jpg", "focus": 0.4, "label": "WEAR", "head": "가볍게 메는 미니 백팩", "sub": "단 230g", "beats": 4},
    {"src": "b.jpg", "focus": "contain", "light": true, "label": "SIZE", "head": "...", "sub": "..."}
  ],
- "end": {"src": "c.jpg", "focus": 0.4, "en": "JOE  COOL  BACKPACK", "kr": "조쿨백팩",
+ "instant": true,  (첫 화면 글씨·로고가 0초부터 보임 — 넘기기 전에 읽히게)
+ "end": {"share": "엔딩 위쪽 공유 문구(선택)", "src": "c.jpg", "focus": 0.4, "en": "JOE  COOL  BACKPACK", "kr": "조쿨백팩",
          "cta": "프로필 링크에서 구매  →", "url": "le-junev.com", "beats": 6}
 }
 - focus: 0~1(세로 어디를 보여줄지) 또는 "contain"(흰 배경 상품컷·컬러표: 자동으로 여백 잘라 크게)
@@ -226,6 +227,7 @@ def main(cfg):
     eEn = Txt(e.get("en", ""), S("Medium", 26), 5); eKr = Txt(e["kr"], S("Bold", 58), -1)
     eCta = Txt(e.get("cta", "프로필 링크에서 구매  →"), S("Medium", 34), 0); eUrl = Txt(e.get("url", "le-junev.com"), S("Light", 26), 3)
     BTN = rmask(560, 104, 52)
+    eShare = Txt(e.get("share", ""), S("Bold", 50), -1) if e.get("share") else None
     yv = np.linspace(0, 1, H)[:, None, None].astype(np.float32)
     if tstyle == "bottom": SCR = np.clip((yv - 0.45) / 0.55, 0, 1) ** 1.1 * 0.78 + np.clip((0.16 - yv) / 0.16, 0, 1) * 0.35
     elif tstyle == "top": SCR = np.clip((0.42 - yv) / 0.42, 0, 1) ** 1.1 * 0.72 + np.clip((yv - 0.85) / 0.15, 0, 1) * 0.2
@@ -276,12 +278,14 @@ def main(cfg):
         kk = eexp((t - allst[cur]) / max(TR, 0.3)); lw_ = (1 if L_cur else 0) * kk + (1 if L_prv else 0) * (1 - kk)
         if cur == len(sc): fr *= 1 - 0.35 * ease((t - ENDS - 0.3) / 0.8)
         fr *= 1 - SCR * (1 - lw_)
-        comp(fr, LOGO, WHITE if lw_ < 0.5 else INK, W / 2 - lw / 2, 118, ease(t / 0.6))
+        comp(fr, LOGO, WHITE if lw_ < 0.5 else INK, W / 2 - lw / 2, 118, 1.0 if cfg.get("instant") else ease(t / 0.6))
         # 장면 글씨
         for i in range(len(sc)):
             lt = t - starts[i]; span = durs[i]
             if lt < 0 or lt > span + 0.05: continue
-            out = cl((lt - (span - 0.22)) / 0.22); Lg = sc[i].get("light", False); shd = 0 if Lg else 0.35
+            out = cl((lt - (span - 0.22)) / 0.22)
+            if i == 0 and cfg.get("instant"): lt = lt + 1.5  # 첫 화면 글씨를 0초부터 완성 상태로
+            Lg = sc[i].get("light", False); shd = 0 if Lg else 0.35
             ty = 1330 if Lg else TY  # 흰 배경 상품컷은 가방 아래에 글씨
             if sc[i].get("label"): LAB[i].draw(fr, ty, SAGE if Lg else GOLDL, lt - 0.12, out=out, blur=4, rise=8, shadow=shd)
             HEAD[i].draw(fr, ty + gap, INK if Lg else WHITE, lt - 0.18, out=out, shadow=shd)
@@ -293,6 +297,7 @@ def main(cfg):
             if bk > 0:
                 by = EY + 170 + (1 - bk) * 20; comp(fr, BTN, np.array([.98, .97, .95], np.float32), W / 2 - 280, by - 52, bk); eCta.draw(fr, by, INK, lt - 0.85, blur=3, rise=4)
             eUrl.draw(fr, EY + 270, LGREY, lt - 1.1, blur=3, rise=6)
+            if eShare: eShare.draw(fr, EY - 150, WHITE, lt - 0.05, stagger=0.02, shadow=0.35)
         fr += GR[f % 6]
         p.stdin.write((np.clip(fr, 0, 1) * 255).astype(np.uint8).tobytes())
     p.stdin.close(); p.wait()
