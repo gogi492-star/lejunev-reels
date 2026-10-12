@@ -278,6 +278,62 @@
       "video": "reels/peanuts_square_20261017.mp4",
       "status": "scheduled",
       "style": "v4 짧게(약 15초)·첫 화면 대화체·엔딩 공유 문구"
+    },
+    {
+      "date": "2026-10-14 10:00",
+      "product": "피너츠맨즈크로스백",
+      "format": "whatfits",
+      "transition": "stack",
+      "text": "bottom",
+      "music": "chill",
+      "hook": "크로스백, 3년은 메잖아요 / 그럼 이 정도는 들어가야죠",
+      "cta": "profile",
+      "video": "reels/trial_mens_cross_20261014.mp4",
+      "status": "scheduled",
+      "type": "TRIAL_REEL",
+      "style": "체험 릴스(비팔로워 우선 노출) · 약 15초 · 첫 화면 대화체 · 엔딩 공유 문구"
+    },
+    {
+      "date": "2026-10-15 10:00",
+      "product": "포빙스누피2",
+      "format": "outfit3",
+      "transition": "flash",
+      "text": "bottom",
+      "music": "bouncy",
+      "hook": "너는 몇 번 룩? / 스누피 버킷 크로스백",
+      "cta": "profile",
+      "video": "reels/trial_pobing_snoopy2_20261015.mp4",
+      "status": "scheduled",
+      "type": "TRIAL_REEL",
+      "style": "체험 릴스(비팔로워 우선 노출) · 약 15초 · 첫 화면 대화체 · 엔딩 공유 문구"
+    },
+    {
+      "date": "2026-10-16 10:00",
+      "product": "조쿨백팩",
+      "format": "forwho",
+      "transition": "whip",
+      "text": "top",
+      "music": "upbeat",
+      "hook": "백팩 무거운 거 싫죠? / 단 230g 스누피 미니 백팩",
+      "cta": "profile",
+      "video": "reels/trial_joecool_backpack_20261016.mp4",
+      "status": "scheduled",
+      "type": "TRIAL_REEL",
+      "style": "체험 릴스(비팔로워 우선 노출) · 약 15초 · 첫 화면 대화체 · 엔딩 공유 문구"
+    },
+    {
+      "date": "2026-10-17 10:00",
+      "product": "디포켓숄더",
+      "format": "pickcolor",
+      "transition": "fade",
+      "text": "bottom",
+      "music": "lofi",
+      "hook": "너는 어떤 색 미키? / 가볍게 툭 메는 숄더백",
+      "cta": "profile",
+      "video": "reels/trial_dpocket_shoulder_20261017.mp4",
+      "status": "scheduled",
+      "type": "TRIAL_REEL",
+      "style": "체험 릴스(비팔로워 우선 노출) · 약 15초 · 첫 화면 대화체 · 엔딩 공유 문구"
     }
   ]
 }
