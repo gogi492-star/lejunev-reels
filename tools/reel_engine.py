@@ -225,7 +225,7 @@ def main(cfg):
     gap = (92 if tstyle == "center" else 78)
     LOGO = logo_mask(cfg.get("logo")); lw = LOGO.shape[1]
     eEn = Txt(e.get("en", ""), S("Medium", 26), 5); eKr = Txt(e["kr"], S("Bold", 58), -1)
-    eCta = Txt(e.get("cta", "프로필 링크에서 구매  →"), S("Medium", 34), 0); eUrl = Txt(e.get("url", "le-junev.com"), S("Light", 26), 3)
+    eCta = Txt(e.get("cta", "프로필 링크에서 구매  →") or " ", S("Medium", 34), 0); eUrl = Txt(e.get("url", "le-junev.com"), S("Light", 26), 3)
     BTN = rmask(560, 104, 52)
     eShare = Txt(e.get("share", ""), S("Bold", 50), -1) if e.get("share") else None
     yv = np.linspace(0, 1, H)[:, None, None].astype(np.float32)
@@ -294,7 +294,7 @@ def main(cfg):
             lt = t - ENDS; EY = 1330
             eEn.draw(fr, EY - 10, GOLDL, lt - 0.25, blur=4, rise=8); eKr.draw(fr, EY + 62, WHITE, lt - 0.32, shadow=0.3)
             bk = ease((lt - 0.7) / 0.5)
-            if bk > 0:
+            if bk > 0 and e.get("cta", "x"):  # cta "" 이면 버튼 없음
                 by = EY + 170 + (1 - bk) * 20; comp(fr, BTN, np.array([.98, .97, .95], np.float32), W / 2 - 280, by - 52, bk); eCta.draw(fr, by, INK, lt - 0.85, blur=3, rise=4)
             eUrl.draw(fr, EY + 270, LGREY, lt - 1.1, blur=3, rise=6)
             if eShare: eShare.draw(fr, EY - 150, WHITE, lt - 0.05, stagger=0.02, shadow=0.35)
