@@ -419,13 +419,13 @@
   {
    "date": "2026-10-24 20:50",
    "product": "MAKING EP.01 디자인(브랜드)",
-   "format": "making-video",
+   "format": "making",
    "transition": "fade",
    "text": "bottom",
    "music": "chill",
-   "hook": "가방은 종이 한 장에서",
+   "hook": "샘플만 이만큼",
    "cta": "",
-   "video": "reels/making_ep01_design_v2_20261024.mp4",
+   "video": "reels/making_ep01_design_v3_20261024.mp4",
    "ending_bag": "오구숄더"
   }
  ]
