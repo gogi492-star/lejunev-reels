@@ -438,6 +438,61 @@
    "hook": "가방 하나로 가을 4룩",
    "cta": "(없음) 넷 중 원픽 룩은? 댓글로",
    "video": "reels/leju_suede_twozipper_20261017.mp4"
+  },
+  {
+   "date": "(메타 비즈니스 스위트 예약)",
+   "product": "리쥬더핸들",
+   "format": "2way",
+   "transition": "fade",
+   "text": "bottom",
+   "music": "chill",
+   "hook": "토트로 들고, 크로스로 메고",
+   "cta": "(없음)",
+   "video": "reels/leju_thehandle_20261017.mp4"
+  },
+  {
+   "date": "(메타 비즈니스 스위트 예약)",
+   "product": "리쥬더블스퀘어",
+   "format": "forwho",
+   "transition": "whip",
+   "text": "center",
+   "music": "lofi",
+   "hook": "출근 가방, 작고 단정하게",
+   "cta": "(없음)",
+   "video": "reels/leju_doublesquare_20261017.mp4"
+  },
+  {
+   "date": "(메타 비즈니스 스위트 예약)",
+   "product": "리쥬더로세무핸들",
+   "format": "pickcolor",
+   "transition": "flash",
+   "text": "bottom",
+   "music": "acoustic",
+   "hook": "너는 어떤 색?",
+   "cta": "(없음)",
+   "video": "reels/leju_losuedehandle_20261017.mp4"
+  },
+  {
+   "date": "(메타 비즈니스 스위트 예약)",
+   "product": "미키패턴숄더",
+   "format": "whatfits",
+   "transition": "stack",
+   "text": "center",
+   "music": "bouncy",
+   "hook": "크게 담고, 가볍게 메고",
+   "cta": "(없음)",
+   "video": "reels/leju_mickeypattern_20261017.mp4"
+  },
+  {
+   "date": "(메타 비즈니스 스위트 예약)",
+   "product": "호피넛즐리",
+   "format": "sendfriend",
+   "transition": "fade",
+   "text": "top",
+   "music": "upbeat",
+   "hook": "스누피 좋아하는 친구 소환",
+   "cta": "(없음)",
+   "video": "reels/leju_hopeanutzly_20261017.mp4"
   }
  ]
 }
