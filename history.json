@@ -493,6 +493,50 @@
    "hook": "스누피 좋아하는 친구 소환",
    "cta": "(없음)",
    "video": "reels/leju_hopeanutzly_20261017.mp4"
+  },
+  {
+   "date": "2026-10-26 20:50",
+   "product": "울리스누피",
+   "format": "outfit3",
+   "transition": "whip",
+   "text": "top",
+   "music": "upbeat",
+   "hook": "호피에 스누피 한 스푼",
+   "cta": "댓글에 '링크' 남기면 DM",
+   "video": "reels/leju_woollysnoopy_20261026.mp4"
+  },
+  {
+   "date": "2026-10-27 20:50",
+   "product": "미키테디백",
+   "format": "pickcolor",
+   "transition": "flash",
+   "text": "center",
+   "music": "bouncy",
+   "hook": "어떤 색 미키가 끌리세요?",
+   "cta": "프로필 링크에서 구매",
+   "video": "reels/leju_mickeyteddy_20261027.mp4"
+  },
+  {
+   "date": "2026-10-28 20:50",
+   "product": "체커스누피",
+   "format": "sendfriend",
+   "transition": "stack",
+   "text": "top",
+   "music": "lofi",
+   "hook": "체크 좋아하는 친구 소환",
+   "cta": "댓글에 '링크' 남기면 DM",
+   "video": "reels/leju_checkersnoopy_20261028.mp4"
+  },
+  {
+   "date": "2026-10-29 20:50",
+   "product": "리쥬마롱백(L)",
+   "format": "lookbook",
+   "transition": "stack",
+   "text": "center",
+   "music": "moody",
+   "hook": "부드러운 스웨이드 가죽",
+   "cta": "프로필 링크에서 구매",
+   "video": "reels/leju_marong_20261029.mp4"
   }
  ]
 }
