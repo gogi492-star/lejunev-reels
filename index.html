@@ -43,9 +43,9 @@
 
   <div class="label">NEW IN REELS</div>
 
-  <!-- 새 릴스 상품은 맨 위에 추가 (최근 상품이 위로) -->
+  <!-- 새 릴스 상품은 맨 위에 추가 (최근 상품이 위로). 예약 릴스는 data-from="게시시간" hidden 을 붙이면 그 시간부터 보임 -->
 
-  <a class="card" href="https://le-junev.com/product/detail.html?product_no=1209">
+  <a class="card" data-from="2026-11-15T20:50:00+09:00" hidden href="https://le-junev.com/product/detail.html?product_no=1209">
     <img src="img/leju_sminkpouch.jpg" alt="스밍크스냅파우치 착용컷" loading="lazy">
     <div class="info">
       <div class="tag">PEANUTS · SNOOPY · NEW</div>
@@ -54,7 +54,7 @@
       <div class="btn">구매하러 가기 →</div>
     </div>
   </a>
-  <a class="card" href="https://le-junev.com/product/detail.html?product_no=1205">
+  <a class="card" data-from="2026-11-14T20:50:00+09:00" hidden href="https://le-junev.com/product/detail.html?product_no=1205">
     <img src="img/leju_suedeeyelet.jpg" alt="리쥬세무아일렛 착용컷" loading="lazy">
     <div class="info">
       <div class="tag">SUEDE · NEW</div>
@@ -368,5 +368,11 @@
 
   <footer>LEJUNEV · le-junev.com</footer>
 </div>
+<script>
+  // 예약 릴스 상품은 게시 시간(data-from)이 지나면 자동으로 보임
+  document.querySelectorAll('.card[data-from]').forEach(function(c){
+    if (Date.now() >= Date.parse(c.dataset.from)) c.hidden = false;
+  });
+</script>
 </body>
 </html>
