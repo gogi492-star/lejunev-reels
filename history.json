@@ -669,6 +669,28 @@
       "hook": "가방 하나로 3가지 룩",
       "cta": "댓글에 '링크' 남기면 DM",
       "video": "reels/leju_shinefur_20261122.mp4"
+    },
+    {
+      "date": "2026-11-23 20:50",
+      "product": "피벨토트",
+      "format": "forwho",
+      "transition": "stack",
+      "text": "bottom",
+      "music": "moody",
+      "hook": "데일리 토트 찾는 분께",
+      "cta": "댓글에 '링크' 남기면 DM",
+      "video": "reels/leju_pibel_20261123.mp4"
+    },
+    {
+      "date": "2026-11-24 20:50",
+      "product": "피치봉봉",
+      "format": "pickcolor",
+      "transition": "fade",
+      "text": "center",
+      "music": "lofi",
+      "hook": "너는 어떤 캐릭터? 댓글로",
+      "cta": "댓글에 '링크' 남기면 DM",
+      "video": "reels/leju_peachbonbon_20261124.mp4"
     }
   ]
 }
