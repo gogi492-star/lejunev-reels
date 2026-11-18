@@ -625,6 +625,50 @@
       "hook": "이 정도는 들어가야죠",
       "cta": "댓글에 '링크' 남기면 DM",
       "video": "reels/leju_sminkpouch_20261115.mp4"
+    },
+    {
+      "date": "2026-11-19 20:50",
+      "product": "스누피멀티백",
+      "format": "pickcolor",
+      "transition": "stack",
+      "text": "top",
+      "music": "bouncy",
+      "hook": "너는 어떤 색? 댓글로",
+      "cta": "댓글에 '링크' 남기면 DM",
+      "video": "reels/leju_snoopymulti_20261119.mp4"
+    },
+    {
+      "date": "2026-11-20 20:50",
+      "product": "디벨토트",
+      "format": "lookbook",
+      "transition": "fade",
+      "text": "center",
+      "music": "chill",
+      "hook": "어떤 룩에도 툭",
+      "cta": "프로필 링크에서 구매",
+      "video": "reels/leju_divel_20261120.mp4"
+    },
+    {
+      "date": "2026-11-21 20:50",
+      "product": "디뽀조리",
+      "format": "sendfriend",
+      "transition": "whip",
+      "text": "bottom",
+      "music": "upbeat",
+      "hook": "디즈니 친구 소환",
+      "cta": "댓글에 '링크' 남기면 DM",
+      "video": "reels/leju_dippojori_20261121.mp4"
+    },
+    {
+      "date": "2026-11-22 20:50",
+      "product": "스누피샤인퍼",
+      "format": "outfit3",
+      "transition": "flash",
+      "text": "top",
+      "music": "acoustic",
+      "hook": "가방 하나로 3가지 룩",
+      "cta": "댓글에 '링크' 남기면 DM",
+      "video": "reels/leju_shinefur_20261122.mp4"
     }
   ]
 }
